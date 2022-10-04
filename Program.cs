@@ -22,7 +22,7 @@ PrintArray(arr3);
 
 int MaxWordLength = 3;
 
-string[] GetShortWordsArray(string[] array)
+string[] GetShortWords(string[] array)
 		{
 			int length = array.Length;			
 			string[] result = new string[length];
@@ -40,4 +40,18 @@ string[] GetShortWordsArray(string[] array)
 			
 			return result;
 		}
-        
+
+void PrintResult(string[] array)
+{
+
+		{
+			string[] shortArray = GetShortWords(array);
+			Console.WriteLine($"Result array (words are less or equal than {MaxWordLength} symbols)");
+			PrintArray(shortArray);
+			Console.WriteLine();
+		}
+		
+		PrintResult(arr1);
+		PrintResult(arr2);
+		PrintResult(arr3);
+	}        
