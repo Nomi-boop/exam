@@ -2,3 +2,20 @@
 string[] arr1 = {"Hello", "2", "world", ":-)"};
 string[] arr2 = {"1234", "1567", "-2", "computer science"};
 string[] arr3 = {"Russia", "Denmark", "Kazan"};
+
+void PrintArray(string[] array)
+		{
+			if(array.Length == 0)
+			{
+				Console.WriteLine("Array is empty");
+			}
+			else
+			{
+				Array.ForEach(array, (str) => Console.Write($"{str} "));
+				Console.WriteLine();
+			}
+		}
+
+PrintArray(arr1);
+PrintArray(arr2);
+PrintArray(arr3);         
