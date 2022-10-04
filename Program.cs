@@ -18,4 +18,26 @@ void PrintArray(string[] array)
 
 PrintArray(arr1);
 PrintArray(arr2);
-PrintArray(arr3);         
+PrintArray(arr3);       
+
+int MaxWordLength = 3;
+
+string[] GetShortWordsArray(string[] array)
+		{
+			int length = array.Length;			
+			string[] result = new string[length];
+			int count = 0;
+			
+			for (int i = 0; i < length; i++)
+			{
+				if(array[i].Length <= MaxWordLength)
+				{
+					result[count] = array[i];
+					count++;
+				}
+			}
+			Array.Resize(ref result, count);
+			
+			return result;
+		}
+        
